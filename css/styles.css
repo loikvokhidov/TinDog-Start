@@ -1,32 +1,11 @@
-/* body::before{
-    display: block;
-    content: '';
-    height: 60px;
-} */
-
 body{
     font-family: Montserrat;
+    text-align: center;
 }
 
-h1{
-    font-family: 'Montserrat';
-    font-weight: 900;
-    font-size: 3.5rem;
-    line-height: 1.5;
-}
-
-h2{
+h1, h2, h3, h4, h5, h6{
     font-family: "montserrat";
     font-weight: 600;
-    font-size: 3rem;
-    line-height: 1.5;
-}
-
-h3{
-    font-family: 'Montserrat';
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: 1.5;
 }
 
 p{
@@ -34,7 +13,31 @@ p{
 }
 
 .container-fluid{
-    padding: 3% 15% 100px;
+    padding: 7% 15% 
+}
+
+/* Colored or White Sections */
+
+.colored-section{
+    background-color: #ff4c68;
+    color: white;
+}
+
+.white-section{
+    background-color: white;
+}
+
+/* Headings section */
+.big-heading{
+    font-family: 'Montserrat';
+    font-weight: 900;
+    font-size: 3.5rem;
+    line-height: 1.5;
+}
+
+.section-heading{
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 
@@ -68,12 +71,12 @@ p{
 
 /* Title Image */
 
-#title{
-    background-color: #ff4c68;
-    color: white;
+#title .container-fluid{
+    padding: 3% 15% 100px;
+    text-align: left;
 }
 
-.title-image1{
+.title-image-div{
     position: relative;
 }
 
@@ -84,18 +87,30 @@ p{
     position: absolute;
 }
 
+@media (max-width: 1028px) {
+    #title{
+        text-align: center;
+    }
+    .title-image{
+        position: static;
+        transform:rotate(0);
+    }
+}
+
 
 /* Features Section */
 
-#features{
-    padding: 7% 15%;
-    background-color: white;
+#features{   
     position: relative;
     z-index: 1;
 }
 
+.feature-title{
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
 .feature-box{
-    text-align: center;
     padding: 5%;
 }
 
@@ -112,9 +127,7 @@ p{
 /* Testimonial Section */
 
 #testimonials{
-    text-align: center;
     background-color: #ef8272;
-    color: white;
 }
 
 .testimonial-image{
@@ -123,13 +136,15 @@ p{
     margin: 20px;
 }
 
-.carousel-item{
-    padding: 7% 15%;
+.testimonial-text{
+    font-size: 3rem;
+    line-height: 1.5;
 }
+
+
 
 #press{
     background-color: #ef8272;
-    text-align: center;
     padding-bottom: 3%;
 }
 
@@ -142,11 +157,15 @@ p{
 
 #pricing{
     padding: 100px;
-    text-align: center;
 }
 
 #pricing-block{
     padding-top: 20px;
+}
+
+.price-text{
+    font-size: 3rem;
+    line-height: 1.5;
 }
 
 .price-border{
@@ -166,3 +185,19 @@ p{
     background-color: #ff4c68;
     border-color: #ff4c68;
 }
+
+/* Footer section */
+
+#footer{
+    background-color: white;
+}
+
+.footer-icon{
+    padding: 10px;
+    color: black;
+}
+
+.footer-copy{
+    margin-top: 20px;
+}
+
